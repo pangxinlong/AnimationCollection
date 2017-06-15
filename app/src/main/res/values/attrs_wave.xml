@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomWaveView">
+        <attr name="wave_speed" format="integer"></attr>
+        <attr name="wave_height" format="dimension"></attr>
+        <attr name="wave_length" format="dimension"></attr>
+        <attr name="bitmap" format="integer"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="SplashView">
+        <attr name="dot_num" format="integer"></attr>
+        <attr name="dot_radius" format="integer"></attr>
+        <attr name="dot_rotational_time" format="integer"></attr>
+        <attr name="circle_radius" format="integer"></attr>
+        <attr name="circle_shrink_time" format="integer"></attr>
+        <attr name="circle_tension_ratio" format="float"></attr>
+        <attr name="water_ripple_time"  format="integer"></attr>
+    </declare-styleable>
+</resources>
