@@ -14,6 +14,19 @@
         <attr name="circle_radius" format="integer"></attr>
         <attr name="circle_shrink_time" format="integer"></attr>
         <attr name="circle_tension_ratio" format="float"></attr>
-        <attr name="water_ripple_time"  format="integer"></attr>
+        <attr name="water_ripple_time" format="integer"></attr>
     </declare-styleable>
+    <declare-styleable name="CustomScrollView">
+        <attr name="isalpha" format="boolean"></attr>
+        <attr name="isscale_x" format="boolean"></attr>
+        <attr name="isscale_y" format="boolean"></attr>
+        <attr name="translateValue"></attr>
+    </declare-styleable>
+    <attr name="translateValue">
+        <flag name="left" value="0x01"></flag>
+        <flag name="top" value="0x02"></flag>
+        <flag name="right" value="0x04"></flag>
+        <flag name="bottom" value="0x08"></flag>
+    </attr>
+
 </resources>

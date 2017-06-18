@@ -2,6 +2,8 @@ package com.example.pangxinlong.animationcollection;
 
 import com.example.pangxinlong.animationcollection.dot.SplashActivity;
 import com.example.pangxinlong.animationcollection.heart.ThumbUpActivity;
+import com.example.pangxinlong.animationcollection.parallelspace.ParallelSpaceActivity;
+import com.example.pangxinlong.animationcollection.scroll.ScrollAnimActivity;
 import com.example.pangxinlong.animationcollection.wave_ship.WaveShipActivity;
 
 import android.os.Bundle;
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("WaveShipActivity");//小船，水流动画
         mDataList.add("ThumbUpActivity");
         mDataList.add("SplashActivity");//启动页小点动画
+        mDataList.add("ParallelSpaceActivity");//平行空间引导页动画
+        mDataList.add("ScrollAnimActivity");//
         mListAdapter.setData(mDataList);
     }
 
@@ -66,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         SplashActivity.start(MainActivity.this);
+                        break;
+                    case 3:
+                        ParallelSpaceActivity.start(MainActivity.this);
+                        break;
+                    case 4:
+                        ScrollAnimActivity.start(MainActivity.this);
                         break;
                 }
             }

@@ -104,6 +104,12 @@ public class SplashView extends View {
         mDiagonalDist = (float) Math.sqrt((w * w + h * h)) / 2f;//勾股定律
     }
 
+//    @Override
+//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+//        setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec)>>1,MeasureSpec.getSize(heightMeasureSpec)>>1);
+//    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

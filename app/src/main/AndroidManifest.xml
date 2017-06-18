@@ -19,6 +19,8 @@
         <activity android:name=".wave_ship.WaveShipActivity"></activity>
         <activity android:name=".heart.ThumbUpActivity"></activity>
         <activity android:name=".dot.SplashActivity"></activity>
+        <activity android:name=".parallelspace.ParallelSpaceActivity"></activity>
+        <activity android:name=".scroll.ScrollAnimActivity"></activity>
     </application>
 
 </manifest>
