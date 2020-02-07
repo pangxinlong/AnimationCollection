@@ -5,10 +5,14 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.pangxinlong.animationcollection.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +34,7 @@ public class LayoutAnimationsDemo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_animation);
-        layoutAnimation = findViewById(R.id.ll_animate);
+        layoutAnimation = (ViewGroup) findViewById(R.id.ll_animate);
         list = new ArrayList<>();
     }
 
@@ -70,12 +74,12 @@ public class LayoutAnimationsDemo extends Activity {
 
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    isRunning=true;
+                    isRunning = true;
                 }
 
                 @Override
                 public void onAnimationCancel(Animator animation) {
-                    isRunning=true;
+                    isRunning = true;
                 }
 
                 @Override
@@ -89,5 +93,10 @@ public class LayoutAnimationsDemo extends Activity {
                 layoutAnimation.removeView(view);
             }
         }
+    }
+
+    public static void start(Context context) {
+        Intent intent = new Intent(context, LayoutAnimationsDemo.class);
+        context.startActivity(intent);
     }
 }

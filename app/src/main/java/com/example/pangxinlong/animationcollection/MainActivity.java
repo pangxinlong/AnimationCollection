@@ -1,10 +1,12 @@
 package com.example.pangxinlong.animationcollection;
 
+import com.example.pangxinlong.animationcollection.animset.LayoutAnimationsDemo;
 import com.example.pangxinlong.animationcollection.dot.SplashActivity;
 import com.example.pangxinlong.animationcollection.heart.ThumbUpActivity;
 import com.example.pangxinlong.animationcollection.parallelspace.ParallelSpaceActivity;
 import com.example.pangxinlong.animationcollection.scroll.ScrollAnimActivity;
 import com.example.pangxinlong.animationcollection.wave_ship.WaveShipActivity;
+import com.example.pangxinlong.animationcollection.zan.ZanActivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         mDataList = new ArrayList<>();
         mDataList.add("WaveShipActivity");//小船，水流动画
-        mDataList.add("ThumbUpActivity");
-        mDataList.add("SplashActivity");//启动页小点动画
+//        mDataList.add("ThumbUpActivity");
+        mDataList.add("启动页动画");//启动页小点动画
         mDataList.add("ParallelSpaceActivity");//平行空间引导页动画
         mDataList.add("ScrollAnimActivity");//
+        mDataList.add("直播间点赞效果");
+        mDataList.add("AnimationsSetDemo");
         mListAdapter.setData(mDataList);
     }
 
@@ -65,17 +69,23 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         WaveShipActivity.start(MainActivity.this);
                         break;
+//                    case 1:
+//                        ThumbUpActivity.start(MainActivity.this);
+//                        break;
                     case 1:
-                        ThumbUpActivity.start(MainActivity.this);
-                        break;
-                    case 2:
                         SplashActivity.start(MainActivity.this);
                         break;
-                    case 3:
+                    case 2:
                         ParallelSpaceActivity.start(MainActivity.this);
                         break;
-                    case 4:
+                    case 3:
                         ScrollAnimActivity.start(MainActivity.this);
+                        break;
+                    case 4:
+                        ZanActivity.start(MainActivity.this);
+                        break;
+                    case 5:
+                        LayoutAnimationsDemo.start(MainActivity.this);
                         break;
                 }
             }
