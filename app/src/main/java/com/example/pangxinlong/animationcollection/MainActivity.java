@@ -1,25 +1,25 @@
 package com.example.pangxinlong.animationcollection;
 
-import com.example.pangxinlong.animationcollection.animset.LayoutAnimationsDemo;
-import com.example.pangxinlong.animationcollection.dot.SplashActivity;
-import com.example.pangxinlong.animationcollection.heart.ThumbUpActivity;
-import com.example.pangxinlong.animationcollection.parallelspace.ParallelSpaceActivity;
-import com.example.pangxinlong.animationcollection.scroll.ScrollAnimActivity;
-import com.example.pangxinlong.animationcollection.wave_ship.WaveShipActivity;
-import com.example.pangxinlong.animationcollection.zan.ZanActivity;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.pangxinlong.animationcollection.animset.LayoutAnimationsDemo;
+import com.example.pangxinlong.animationcollection.carddrag.CardDragActivity;
+import com.example.pangxinlong.animationcollection.dot.SplashActivity;
+import com.example.pangxinlong.animationcollection.fingersign.FingerSignActivity;
+import com.example.pangxinlong.animationcollection.parallelspace.ParallelSpaceActivity;
+import com.example.pangxinlong.animationcollection.scroll.ScrollAnimActivity;
+import com.example.pangxinlong.animationcollection.wave_ship.WaveShipActivity;
+import com.example.pangxinlong.animationcollection.zan.ZanActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("ScrollAnimActivity");//
         mDataList.add("直播间点赞效果");
         mDataList.add("AnimationsSetDemo");
+        mDataList.add("重叠卡片拖动");
+        mDataList.add("电子签名");
         mListAdapter.setData(mDataList);
     }
 
@@ -86,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         LayoutAnimationsDemo.start(MainActivity.this);
+                        break;
+                    case 6:
+                        CardDragActivity.start(MainActivity.this);
+                        break;
+                    case 7:
+                        FingerSignActivity.start(MainActivity.this);
                         break;
                 }
             }
