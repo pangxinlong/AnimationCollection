@@ -10,6 +10,7 @@ import com.example.pangxinlong.animationcollection.animset.LayoutAnimationsDemo;
 import com.example.pangxinlong.animationcollection.carddrag.CardDragActivity;
 import com.example.pangxinlong.animationcollection.dot.SplashActivity;
 import com.example.pangxinlong.animationcollection.fingersign.FingerSignActivity;
+import com.example.pangxinlong.animationcollection.fish.FishActivity;
 import com.example.pangxinlong.animationcollection.parallelspace.ParallelSpaceActivity;
 import com.example.pangxinlong.animationcollection.scroll.ScrollAnimActivity;
 import com.example.pangxinlong.animationcollection.wave_ship.WaveShipActivity;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add("AnimationsSetDemo");
         mDataList.add("重叠卡片拖动");
         mDataList.add("电子签名");
+        mDataList.add("灵动锦鲤鱼");
         mListAdapter.setData(mDataList);
     }
 
@@ -94,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         FingerSignActivity.start(MainActivity.this);
+                        break;
+                    case 8:
+                        FishActivity.start(MainActivity.this);
                         break;
                 }
             }

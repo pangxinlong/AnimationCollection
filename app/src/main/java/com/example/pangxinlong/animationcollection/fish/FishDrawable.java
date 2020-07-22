@@ -206,12 +206,31 @@ public class FishDrawable extends Drawable {
     }
 
     private void makeWings(@NonNull Canvas canvas, PointF fishHeadPoint, boolean isRight, int fishAngle) {
+        //方案一
+//        float wingsControlLengthRate;
+//        if (swingSpeed == 1) {//原地不动
+//            wingsControlLengthRate = 1;
+//        } else {//游动时
+//            wingsControlLengthRate = (float) Math.abs(Math.sin(Math.toRadians(currentValue)));//0～1的值
+//        }
+
+        //方案二
+        float wingsAngleRate;
+//        if (swingSpeed == 1) {//原地不动
+//            wingsAngleRate = 0
+//        } else {//游动时
+//            wingsAngleRate = (float) Math.abs(Math.sin(Math.toRadians(currentValue))) * 20;//0～1的值 *
+//        }
+
+        //最终版
+        wingsAngleRate = (float) Math.abs(Math.sin(Math.toRadians(currentValue * (swingSpeed > 1 ? 2 : 1)))) * 20;//0～1的值 *20
+
         PointF startWingPoint = isRight ? calculationPoint(fishHeadPoint, headToWingLength, fishAngle - 105) :
                 calculationPoint(fishHeadPoint, headToWingLength, fishAngle + 105);
 
         PointF endWingPoint = calculationPoint(startWingPoint, wingLength, fishAngle - 180);
-        PointF controlPoint = isRight ? calculationPoint(startWingPoint, wingsControlLength, fishAngle - 120) :
-                calculationPoint(startWingPoint, wingsControlLength, fishAngle + 120);
+        PointF controlPoint = isRight ? calculationPoint(startWingPoint, wingsControlLength, (int) (fishAngle - 120 - wingsAngleRate)) :
+                calculationPoint(startWingPoint, wingsControlLength, (int) (fishAngle + 120 + wingsAngleRate));
 
         mPath.reset();
         mPath.moveTo(startWingPoint.x, startWingPoint.y);
